@@ -12,7 +12,7 @@ const calculator = {
 };
 
 //updates our display
-const updateDisplay = (number) => display.innerHTML = calculator.displayValue;
+const updateDisplay = () => display.innerHTML = calculator.displayValue;
 
 function appendInput(number) {
 
@@ -27,6 +27,7 @@ function appendInput(number) {
     console.log(calculator.calculationValue);
 
 }
+
 
 function clearDisplay() {
     //reset our values
