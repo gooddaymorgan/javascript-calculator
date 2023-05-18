@@ -29,7 +29,7 @@ function appendInput(number) {
 }
 
 function setOperator(operator) {
-    
+
     if (calculator.firstOperand == null) {
         calculator.displayValue += operator.toString();
         calculator.firstOperand = true;
@@ -44,4 +44,10 @@ function clearDisplay() {
     calculator.calculationValue = 0,
 
         updateDisplay();
+}
+
+function calculate() {
+
+
+    updateDisplay();
 }
