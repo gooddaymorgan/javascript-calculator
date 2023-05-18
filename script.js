@@ -28,6 +28,12 @@ function appendInput(number) {
 
 }
 
+function setOperator (operator) {
+
+    calculator.displayValue += operator.toString();
+    updateDisplay();
+
+}
 
 function clearDisplay() {
     //reset our values
