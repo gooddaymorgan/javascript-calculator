@@ -1,7 +1,13 @@
-const numberButtons = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operation]')
-const equalsButton = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('[data-delete]')
-const allClearButton = document.querySelector('[data-all-clear]')
-const previousOperandTextElement = document.querySelector('[data-previous-operand]')
-const currentOperandTextElement = document.querySelector('[data-current-operand]')
+//create object
+//changes based on input 
+
+const HTMLdisplay = document.getElementById('HTMLdisplay')
+
+const calculator = {
+    displayValue: '0',  //default string value in calculator bar displayed is 0
+    firstOperand: null, 
+    waitingForSecondOperand: false, 
+    operator: null,
+  };
+
+
