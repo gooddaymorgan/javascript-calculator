@@ -28,11 +28,14 @@ function appendInput(number) {
 
 }
 
-function setOperator (operator) {
+function setOperator(operator) {
+    
+    if (calculator.firstOperand == null) {
+        calculator.displayValue += operator.toString();
+        calculator.firstOperand = true;
+    }
 
-    calculator.displayValue += operator.toString();
     updateDisplay();
-
 }
 
 function clearDisplay() {
@@ -40,5 +43,5 @@ function clearDisplay() {
     calculator.displayValue = '';
     calculator.calculationValue = 0,
 
-    updateDisplay();
+        updateDisplay();
 }
