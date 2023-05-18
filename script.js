@@ -4,13 +4,14 @@
 const display = document.getElementById('display')
 
 const calculator = {
-    displayValue: '0',  //default string value in calculator bar displayed is 0
+    displayValue: '',  //default string value in calculator bar displayed is 0
     calculationValue: 0,
     firstOperand: null,
     waitingForSecondOperand: false,
     operator: null,
 };
 
+//updates our display
 const updateDisplay = (number) => display.innerHTML = calculator.displayValue;
 
 function appendInput(number) {
@@ -19,15 +20,18 @@ function appendInput(number) {
     //creates visual reprsentation of math equation?? I think that's how you word it
     calculator.displayValue += number.toString();
 
-    //calculation
-    calculationValue = Number(calculator.displayValue);
+    //creates display into first number in equation 
+    calculator.calculationValue = parseInt(calculator.displayValue);
 
     updateDisplay();
     console.log(calculator.calculationValue);
+
 }
 
+function clearDisplay() {
+    //reset our values
+    calculator.displayValue = '';
+    calculator.calculationValue = 0,
 
-
-// function submitCalculation (a) {
-
-// }
+    updateDisplay();
+}
