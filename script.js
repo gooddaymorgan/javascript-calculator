@@ -5,18 +5,29 @@ const display = document.getElementById('display')
 
 const calculator = {
     displayValue: '0',  //default string value in calculator bar displayed is 0
+    calculationValue: 0,
     firstOperand: null,
     waitingForSecondOperand: false,
     operator: null,
 };
 
-console.log("Before" + calculator.displayValue);
+const updateDisplay = (number) => display.innerHTML = calculator.displayValue;
 
+function appendInput(number) {
 
-const updateDisplay = (a) => display.innerHTML = calculator.displayValue;
+    //adds value from caculation to HTML display
+    //creates visual reprsentation of math equation?? I think that's how you word it
+    calculator.displayValue += number.toString();
 
-function appendInput(a) {
-    calculator.displayValue += a.toString();
+    //calculation
+    calculationValue = Number(calculator.displayValue);
+
     updateDisplay();
-    console.log(calculator.displayValue);
+    console.log(calculator.calculationValue);
 }
+
+
+
+// function submitCalculation (a) {
+
+// }
