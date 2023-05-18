@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-	<script src="index.js"></script>
-  </body>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="display" id="display">0</div>
+        <button class="btn" onclick="clearDisplay()">C</button>
+        <button class="btn" onclick="appendNumber(7)">7</button>
+        <button class="btn" onclick="appendNumber(8)">8</button>
+        <button class="btn" onclick="appendNumber(9)">9</button>
+        <button class="btn" onclick="setOperator('+')">+</button>
+
+        <br />
+
+        <button class="btn" onclick="appendNumber(4)">4</button>
+        <button class="btn" onclick="appendNumber(5)">5</button>
+        <button class="btn" onclick="appendNumber(6)">6</button>
+        <button class="btn" onclick="setOperator('-')">-</button>
+
+        <br />
+        <button class="btn" onclick="appendNumber(1)">1</button>
+        <button class="btn" onclick="appendNumber(2)">2</button>
+        <button class="btn" onclick="appendNumber(3)">3</button>
+        <button class="btn" onclick="setOperator('*')">*</button>
+
+        <br />
+
+        <button class="btn" onclick="appendNumber(0)">0</button>
+        <button class="btn" onclick="appendDecimal()">.</button>
+        <button class="btn" onclick="calculate()">=</button>
+        <button class="btn" onclick="setOperator('/')">/</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
 </html>
