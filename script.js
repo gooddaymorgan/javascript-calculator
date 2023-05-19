@@ -13,12 +13,15 @@ let finalCalculation = 0; //for final calcultion
 const display = document.getElementById('display')
 const updateDisplay = () => display.innerHTML = calculator.htmlString;
 
+const history = document.getElementById('history')
+const updateHistory = () => history.innerHTML = calculator.htmlString;
+
 //---------------------------------------------------->
 
 //adds input from button press to our calculator object
 function appendInput(number) {
 
-    //adds our total input numberd to a string to be updated for our HTML
+    //adds our total input number to a string to be updated for our HTML
     calculator.htmlString += number.toString();
     calculator.stringNumber+= number.toString();
     // adds our input number to our calculation value
@@ -70,22 +73,20 @@ function clearDisplay() {
 }
 
 
+
 function calculate() {
-    
-    finalCalculation = calculator.calculationArray[0]
-    addArray(); 
-    console.log(finalCalculation + " START")
-    console.log(calculator.calculationArray)
-    console.log(calculator.operatorArray)
 
     //up one bc we do not want to calculate our first number
+    finalCalculation = calculator.calculationArray[0]
+    addArray(); 
 
+
+    //loops through our number array and then add/subtracts/multi/divide based on which operand is in the array
     for (let i = 1; i < calculator.calculationArray.length; i++) {
 
         if (calculator.operatorArray[i-1] == '+'){
 
             finalCalculation += calculator.calculationArray[i]
-            console.log("it's looping")
     
         }
         if (calculator.operatorArray[i-1] == '-'){
@@ -104,9 +105,9 @@ function calculate() {
     
         }
     
-        console.log(finalCalculation + "LOOP")
     }
+    
+    updateHistory();
+    clearDisplay();
 
-
-    updateDisplay();
 }
