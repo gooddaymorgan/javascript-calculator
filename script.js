@@ -13,8 +13,6 @@ let finalCalculation = 0; //for final calcultion
 const display = document.getElementById('display')
 const updateDisplay = () => display.innerHTML = calculator.htmlString;
 
-const history = document.getElementById('history')
-const updateHistory = () => history.innerHTML = calculator.htmlString;
 
 //---------------------------------------------------->
 
@@ -23,13 +21,13 @@ function appendInput(number) {
 
     //adds our total input number to a string to be updated for our HTML
     calculator.htmlString += number.toString();
-    calculator.stringNumber+= number.toString();
+    calculator.stringNumber += number.toString();
     // adds our input number to our calculation value
     calculator.currentInputNumber = parseFloat(calculator.stringNumber); //expected output (ex 9999 or 1234) should continously add numbers to end
     calculator.canAddOperand = true; //we have number inputed so now we can have operand
     updateDisplay();
 
-    console.log("This is my calculation value" + calculator.currentInputNumber );
+    console.log("This is my calculation value" + calculator.currentInputNumber);
 
 }
 
@@ -62,11 +60,11 @@ function setOperator(operator) {
 
 //reset our values
 function clearDisplay() {
-    
+
     calculator.htmlString = '';
-    calculator.stringNumber= '',
-    calculator.currentInputNumber = 0,
-    calculator.calculationArray = [];
+    calculator.stringNumber = '',
+        calculator.currentInputNumber = 0,
+        calculator.calculationArray = [];
     calculator.operatorArray = [];
     calculator.canAddOperand = false;
     updateDisplay();
@@ -78,35 +76,50 @@ function calculate() {
 
     //up one bc we do not want to calculate our first number
     finalCalculation = calculator.calculationArray[0]
-    addArray(); 
+    addArray();
 
 
     //loops through our number array and then add/subtracts/multi/divide based on which operand is in the array
     for (let i = 1; i < calculator.calculationArray.length; i++) {
 
-        if (calculator.operatorArray[i-1] == '+'){
+        if (calculator.operatorArray[i - 1] == '+') {
 
             finalCalculation += calculator.calculationArray[i]
-    
+
         }
-        if (calculator.operatorArray[i-1] == '-'){
+        if (calculator.operatorArray[i - 1] == '-') {
 
             finalCalculation -= calculator.calculationArray[i]
-    
+
         }
-        if (calculator.operatorArray[i-1] == '*'){
+        if (calculator.operatorArray[i - 1] == '*') {
 
             finalCalculation *= calculator.calculationArray[i]
-    
+
         }
-        if (calculator.operatorArray[i-1] == '/'){
+        if (calculator.operatorArray[i - 1] == '/') {
 
             finalCalculation /= calculator.calculationArray[i]
-    
+
         }
-    
+
     }
-    
+
+    function updateHistory() {
+
+        //updates our display
+        // const display = document.getElementById('display')
+        // const updateDisplay = () => display.innerHTML = calculator.htmlString;
+        
+
+        let p = document.createElement("p");
+        let text = document.createTextNode(calculator.htmlString + "=" + finalCalculation);
+        p.appendChild(text);
+        let history = document.getElementById("history");
+        history.insertBefore(p, history.children[0])
+
+    }
+
     updateHistory();
     clearDisplay();
 
