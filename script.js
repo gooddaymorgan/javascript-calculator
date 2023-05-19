@@ -69,32 +69,36 @@ function clearDisplay() {
     updateDisplay();
 }
 
+
 function calculate() {
     
     finalCalculation = calculator.calculationArray[0]
+    addArray(); 
     console.log(finalCalculation + " START")
+    console.log(calculator.calculationArray)
+    console.log(calculator.operatorArray)
 
-    //up one bc we want to match the operand array when we loop
+    //up one bc we do not want to calculate our first number
 
     for (let i = 1; i < calculator.calculationArray.length; i++) {
 
-        if (calculator.operatorArray[i] == '+'){
+        if (calculator.operatorArray[i-1] == '+'){
 
             finalCalculation += calculator.calculationArray[i]
             console.log("it's looping")
     
         }
-        if (calculator.operatorArray[i] == '-'){
+        if (calculator.operatorArray[i-1] == '-'){
 
             finalCalculation -= calculator.calculationArray[i]
     
         }
-        if (calculator.operatorArray[i] == '*'){
+        if (calculator.operatorArray[i-1] == '*'){
 
             finalCalculation *= calculator.calculationArray[i]
     
         }
-        if (calculator.operatorArray[i] == '/'){
+        if (calculator.operatorArray[i-1] == '/'){
 
             finalCalculation /= calculator.calculationArray[i]
     
