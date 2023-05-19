@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <div>
+        <h1>Cat-Culator</h1>
+        <p>Image</p>
+        <p>Note: This calculator does not use BEDMAS / PEDMAS</p>
+    </div>
+
     <div class="container">
         <div class="display" id="display">0</div>
         <button class="btn" onclick="clearDisplay()">C</button>
@@ -33,7 +39,10 @@
         <button class="btn" onclick="calculate()">=</button>
         <button class="btn" onclick="setOperator('/')">/</button>
     </div>
-    <p>This calculator does not use BEDMAS / PEDMAS</p>
+
+    <h1>History</h1>
+    <div id="history">No History Yet</div>
+
     <script src="script.js"></script>
 </body>
 
