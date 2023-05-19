@@ -7,6 +7,8 @@ const calculator = {
     operatorArray: [], //stores our operators
 };
 
+let finalCalculation = 0; //for final calcultion
+
 //updates our display
 const display = document.getElementById('display')
 const updateDisplay = () => display.innerHTML = calculator.htmlString;
@@ -38,6 +40,7 @@ function addArray() {
     calculator.calculationArray.push(calculator.currentInputNumber);
     calculator.currentInputNumber = 0;
     calculator.stringNumber = ''; //sets to zero to restart the next number into array
+
 }
 
 //adds operators to our calculator 
@@ -67,6 +70,39 @@ function clearDisplay() {
 }
 
 function calculate() {
-    console.log(finish)
+    
+    finalCalculation = calculator.calculationArray[0]
+    console.log(finalCalculation + " START")
+
+    //up one bc we want to match the operand array when we loop
+
+    for (let i = 1; i < calculator.calculationArray.length; i++) {
+
+        if (calculator.operatorArray[i] == '+'){
+
+            finalCalculation += calculator.calculationArray[i]
+            console.log("it's looping")
+    
+        }
+        if (calculator.operatorArray[i] == '-'){
+
+            finalCalculation -= calculator.calculationArray[i]
+    
+        }
+        if (calculator.operatorArray[i] == '*'){
+
+            finalCalculation *= calculator.calculationArray[i]
+    
+        }
+        if (calculator.operatorArray[i] == '/'){
+
+            finalCalculation /= calculator.calculationArray[i]
+    
+        }
+    
+        console.log(finalCalculation + "LOOP")
+    }
+
+
     updateDisplay();
 }
