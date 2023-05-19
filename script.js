@@ -2,7 +2,7 @@ const calculator = {
     displayValue: '',  //takes user input as strings to display in HTML
     calculationValue: 0, //takes user input for actual calculation
     calculationArray: [], //stores our final values to calculate
-    firstOperand: false, //if false add operator to string
+    canAddOperand: false, //if true add operator to string
     operatorArray: [], //stores our operators
 };
 
@@ -20,7 +20,8 @@ function appendInput(number) {
 
     // adds our input number to our calculation value
     calculator.calculationValue = parseFloat(calculator.displayValue); //expected output (ex 9999 or 1234) should continously add numbers to end
-
+    calculator.canAddOperand = true;
+    //sets operand to false 
     updateDisplay();
 
     //console.log("This is my calculation value" + calculator.calculationValue );
@@ -37,10 +38,10 @@ function addArray() {
 //adds operators to our calculator 
 function setOperator(operator) {
 
-    if (calculator.firstOperand == false) {
+    if (calculator.canAddOperand == true) {
         addArray(); //adds our number before operator into array for final calculation
         calculator.displayValue += operator.toString(); //adds operator to our HTML
-        calculator.firstOperand = true; //sets operand to true to show that we have an operand in the string and cannot add another one until it is resolved
+        calculator.canAddOperand = false; //sets operand to false to show that we have an operand in the string and cannot add another one until it is resolved
         console.log("This is my array" + calculator.calculationArray)
     }
 
@@ -52,7 +53,7 @@ function clearDisplay() {
     calculator.displayValue = '';
     calculator.calculationValue = 0,
     calculator.calculationArray = [];
-    calculator.firstOperand = false;
+    calculator.canAddOperand = false;
     updateDisplay();
 }
 
