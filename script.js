@@ -22,6 +22,7 @@ function appendInput(number) {
     //adds our total input number to a string to be updated for our HTML
     calculator.htmlString += number.toString();
     calculator.stringNumber += number.toString();
+
     // adds our input number to our calculation value
     calculator.currentInputNumber = parseFloat(calculator.stringNumber); //expected output (ex 9999 or 1234) should continously add numbers to end
     calculator.canAddOperand = true; //we have number inputed so now we can have operand
@@ -31,11 +32,6 @@ function appendInput(number) {
 
 }
 
-// function appendDecimal() {
-
-// }
-
-// pushes our variables in calculator object to array to store for final calculation
 function addArray() {
 
     calculator.calculationArray.push(calculator.currentInputNumber);
@@ -63,8 +59,8 @@ function clearDisplay() {
 
     calculator.htmlString = '';
     calculator.stringNumber = '',
-        calculator.currentInputNumber = 0,
-        calculator.calculationArray = [];
+    calculator.currentInputNumber = 0,
+    calculator.calculationArray = [];
     calculator.operatorArray = [];
     calculator.canAddOperand = false;
     updateDisplay();
@@ -73,11 +69,6 @@ function clearDisplay() {
 
 
 function calculate() {
-
-    //if no second number do not calculate
-    // if (calculator.canAddOperand == true) {
-    //     return
-    // }
 
     finalCalculation = calculator.calculationArray[0] //add our array to variable at 0 spot so we can loop 
     addArray(); //makes sure our last number is added to array
@@ -112,15 +103,17 @@ function calculate() {
     // updates our display
     function updateHistory() {
 
+        finalCalculation = finalCalculation.toFixed(2);
+
         let p = document.createElement("p");
         let history = document.getElementById("history");
         let text;
 
         // if we have two numbers in array to computate-- execute this 
-        if (calculator.calculationArray.length > 2) {
+        if (calculator.calculationArray.length > 1) {
             text = document.createTextNode(calculator.htmlString + "=" + finalCalculation); // add equals sign 
         }
-        //Our array has under 2 numbers (plus a operator) -- execute this
+        //Our array has under 2 numbers -- execute this
         else {
             text = document.createTextNode(calculator.htmlString);
         }
