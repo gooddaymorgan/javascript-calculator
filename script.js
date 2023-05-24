@@ -74,9 +74,13 @@ function clearDisplay() {
 
 function calculate() {
 
-    //up one bc we do not want to calculate our first number
-    finalCalculation = calculator.calculationArray[0]
-    addArray();
+    //if no second number do not calculate
+    // if (calculator.canAddOperand == true) {
+    //     return
+    // }
+
+    finalCalculation = calculator.calculationArray[0] //add our array to variable at 0 spot so we can loop 
+    addArray(); //makes sure our last number is added to array
 
 
     //loops through our number array and then add/subtracts/multi/divide based on which operand is in the array
@@ -105,19 +109,24 @@ function calculate() {
 
     }
 
+    // updates our display
     function updateHistory() {
 
-        //updates our display
-        // const display = document.getElementById('display')
-        // const updateDisplay = () => display.innerHTML = calculator.htmlString;
-        
-
         let p = document.createElement("p");
-        let text = document.createTextNode(calculator.htmlString + "=" + finalCalculation);
-        p.appendChild(text);
         let history = document.getElementById("history");
-        history.insertBefore(p, history.children[0])
+        let text;
 
+        // if we have two numbers in array to computate-- execute this 
+        if (calculator.calculationArray.length > 2) {
+            text = document.createTextNode(calculator.htmlString + "=" + finalCalculation); // add equals sign 
+        }
+        //Our array has under 2 numbers (plus a operator) -- execute this
+        else {
+            text = document.createTextNode(calculator.htmlString);
+        }
+
+        p.appendChild(text);
+        history.insertBefore(p, history.children[0])
     }
 
     updateHistory();
