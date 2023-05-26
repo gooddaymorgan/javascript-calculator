@@ -4,17 +4,22 @@ body {
     text-align: center;
     background-color: rgb(17, 16, 35);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: #ffe1b9;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 0px #f8bf55;
 
 }
+
+.btn {
+    display: inline-grid;
+}
+
 .cat-tummy {
     background-color: #fa8e00;
     box-shadow: 5px 0px #753111;
@@ -23,15 +28,44 @@ body {
 .collar {
     background-color: rgb(181, 27, 27);
     height: 20px;
-    
+
 }
 
 .cat-head {
+    position: relative;
     left: 0vmin;
     height: 100px;
     border-radius: 50px 50px 0px 0px;
     background: #fa8e00;
     box-shadow: 5px 0px #753111;
+}
+
+.cat-ear {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #fa8e00;
+    translate: 160px 60px;
+}
+
+.cat-ear-2 {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #fa8e00;
+    translate: 20px 10px;
+}
+
+.cat-ear-inner {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #d83737;
+    translate: -20px 10px;
 }
 
 .paws {
@@ -42,4 +76,68 @@ body {
     translate: 2px 40px;
     border-radius: 100px;
     border: 3px solid #b76800;
-} 
+}
+
+.cat-eye {
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    background-color: #000000;
+    border-radius: 100px;
+}
+
+.cat-eye-left {
+    translate: 70px 40px;
+}
+
+.cat-eye-right {
+    translate: 160px 40px;
+}
+
+.mouth {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #ffe1b9;
+    border-radius: 100px;
+    translate: 90px 70px;
+
+}
+
+.mouth-left {
+    translate: 90px 70px;
+}
+
+.mouth-right {
+    translate: 120px 70px;
+}
+
+.nose {
+
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #d83737;
+    translate: 105px 70px;
+}
+
+button {
+    font-weight: 700;
+    color: white;
+    background-color: rgb(214, 129, 1);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px rgb(171, 89, 22);
+    margin: 2px;
+}
+
+.display {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 1px 1px 2px rgb(180, 178, 178);
+}
