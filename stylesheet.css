@@ -7,13 +7,17 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.cat {
+    margin: auto;
+    min-width: 300px;
+    max-width: 300px;
+}
 .container {
     background-color: #ffe1b9;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 0px #f8bf55;
-
 }
 
 .btn {
@@ -21,6 +25,9 @@ body {
 }
 
 .cat-tummy {
+    margin: auto;
+    min-width: 300px;
+    max-width: 300px;
     background-color: #fa8e00;
     box-shadow: 5px 0px #753111;
 }
@@ -28,11 +35,10 @@ body {
 .collar {
     background-color: rgb(181, 27, 27);
     height: 20px;
-
 }
 
 .cat-head {
-    position: relative;
+    display: flex;
     left: 0vmin;
     height: 100px;
     border-radius: 50px 50px 0px 0px;
@@ -44,16 +50,16 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    border-left: 30px solid transparent;
+    border-left: 60px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 50px solid #fa8e00;
-    translate: 160px 60px;
+    translate: 160px 10px;
 }
 
 .cat-ear-2 {
     width: 0;
     height: 0;
-    border-left: 30px solid transparent;
+    border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-bottom: 50px solid #fa8e00;
     translate: 20px 10px;
@@ -78,6 +84,17 @@ body {
     border: 3px solid #b76800;
 }
 
+.paws-2 {
+    position: absolute;
+    height: 30px;
+    width: 20px;
+    background-color: #fa8e00;
+    translate: 2px 40px;
+    border-radius: 100px;
+    border: 3px solid #b76800;
+}
+
+
 .cat-eye {
     position: absolute;
     height: 30px;
@@ -87,11 +104,11 @@ body {
 }
 
 .cat-eye-left {
-    translate: 70px 40px;
+    translate: 80px 40px;
 }
 
 .cat-eye-right {
-    translate: 160px 40px;
+    translate: 200px 40px;
 }
 
 .mouth {
@@ -105,11 +122,11 @@ body {
 }
 
 .mouth-left {
-    translate: 90px 70px;
+    translate: 110px 70px;
 }
 
 .mouth-right {
-    translate: 120px 70px;
+    translate: 150px 70px;
 }
 
 .nose {
@@ -119,7 +136,7 @@ body {
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
     border-top: 20px solid #d83737;
-    translate: 105px 70px;
+    translate: 130px 70px;
 }
 
 button {
@@ -131,12 +148,6 @@ button {
     border-radius: 10px;
     box-shadow: 2px 2px 0px rgb(171, 89, 22);
     margin: 2px;
-}
-
-button:first-child {
-    font-weight: 700;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
 }
 
 .display {
