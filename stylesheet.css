@@ -1,5 +1,27 @@
+/* Display Style */
+button {
+    font-weight: 700;
+    color: white;
+    background-color: rgb(214, 129, 1);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0px rgb(171, 89, 22);
+    margin: 2px;
+}
+
+.display {
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 1px 1px 2px rgb(180, 178, 178);
+}
+
 body {
-    margin: 10%;
+    margin: 5%;
     display: grid;
     text-align: center;
     background-color: rgb(17, 16, 35);
@@ -7,6 +29,7 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Art */
 .cat {
     margin: auto;
     min-width: 300px;
@@ -89,11 +112,10 @@ body {
     height: 30px;
     width: 20px;
     background-color: #fa8e00;
-    translate: 2px 40px;
+    translate: 270px 40px;
     border-radius: 100px;
     border: 3px solid #b76800;
 }
-
 
 .cat-eye {
     position: absolute;
@@ -130,7 +152,6 @@ body {
 }
 
 .nose {
-
     width: 0; 
     height: 0; 
     border-left: 20px solid transparent;
@@ -139,23 +160,11 @@ body {
     translate: 130px 70px;
 }
 
-button {
-    font-weight: 700;
-    color: white;
-    background-color: rgb(214, 129, 1);
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0px rgb(171, 89, 22);
-    margin: 2px;
-}
-
-.display {
-    font-weight: 600;
-    color: black;
-    background-color: white;
+.legs {
+    margin: auto;
+    min-width: 300px;
+    max-width: 300px;
+    background-color: #fa8e00;
+    height: 20px;
     border-radius: 20px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 1px 1px 2px rgb(180, 178, 178);
 }
