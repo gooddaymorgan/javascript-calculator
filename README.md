@@ -35,18 +35,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Calling all cat lovers and math enthusiasts! Say hello to the Cat-Culator, a calculator designed exclusively to solve your simple yet EXTREMELY important feline math expressions. Whether you're a cat owner or a math geek looking for a fun twist on a traditional calculator, this unique software is sure to whisker you away!
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The Cat-Culator is an adorable calculator I built using: HTML, CSS, and Vanilla JS. This project was developed to practice my vanilla JavaScript foundations. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+### Features
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+- Adorable Cat UI
+- Multiplies, Divides, Subtracts, and Adds.
+- Provides a local history of all the evaluations you've submitted.
 
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,6 +52,7 @@ Use the `BLANK_README.md` to get started.
 
 ### Built With
 
+`🍦 Vanilla JavaScript`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -66,27 +65,21 @@ Use the `BLANK_README.md` to get started.
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
 ### Installation
 
-_This project doesn't rely on any external dependencies or services. It runs without server dependencies. _
+This project doesn't rely on any external dependencies or services. It runs without server dependencies.
 
 1. Clone the repo
-2. Open index.html to start to view, or preview in your code editor
+2. Open (`index.html`) to start to view, or preview in your code editor
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is created 
+- This project is created to be a fun calculator used for simple math expressions, as per the limitations of using JavaScript. 
+- This calculator DOES NOT use BEDMAS / PEDMAS
+- This calculator is free to use for everyone and is open source!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
