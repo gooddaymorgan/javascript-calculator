@@ -16,10 +16,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">The Cat-Culator 🐱🧮</h3>
 
   <p align="center">
@@ -30,11 +26,11 @@
     <a href="https://github.com/gooddaymorgan/javascript-calculator/issues">🐞 Report Bug</a>
     ·
   </p>
+   <img src="images/cat.PNG" alt="Logo" height='370' width='299'>
 </div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
 Calling all cat lovers and math enthusiasts! Say hello to the Cat-Culator, a calculator designed exclusively to solve your simple yet EXTREMELY important feline math expressions. Whether you're a cat owner or a math geek looking for a fun twist on a traditional calculator, this unique software is sure to whisker you away!
 
 The Cat-Culator is an adorable calculator I built using: HTML, CSS, and Vanilla JS. This project was developed to practice my vanilla JavaScript foundations. 
@@ -48,16 +44,12 @@ The Cat-Culator is an adorable calculator I built using: HTML, CSS, and Vanilla 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
 
 `🍦 Vanilla JavaScript`
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -82,7 +74,6 @@ This project doesn't rely on any external dependencies or services. It runs with
 - This calculator is free to use for everyone and is open source!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
